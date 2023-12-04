@@ -13,30 +13,45 @@ public class register {
     public static void register() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter your username: ");
-        String username = scanner.nextLine();
+        try {
+            System.out.println("\n=============================");
+            System.out.println("|     ### REGISTER  ###     |");
+            System.out.println("=============================\n");
 
-        System.out.print("Enter your password: ");
-        String password = scanner.nextLine();
+            System.out.print("Enter your username: ");
+            String username = scanner.nextLine();
 
-        User user = new User();
-        user.setName(username);
-        user.setPassword(password);
-        user.setProfile("Soldier");
+            System.out.print("Enter your password: ");
+            String password = scanner.nextLine();
 
-        List<User> existingUsers = SaveJsonToFile.loadObjects("users.json", new TypeToken<List<User>>(){}.getType());
+            System.out.print("Repeat your password: ");
+            String repeatPassword = scanner.nextLine();
 
-        if (isUsernameTaken(existingUsers, username)) {
-            System.out.println("Username already taken. Please choose a different one.");
-        } else {
-            existingUsers.add(user);
+            if (!password.equals(repeatPassword)) {
+                System.out.println("Passwords do not match. Please try again.");
+                register();
+                return;
+            }
 
-            SaveJsonToFile.saveJsonToFile(existingUsers, "users.json");
+            User user = new User();
+            user.setName(username);
+            user.setPassword(password);
+            user.setProfile("Soldier");
 
-            System.out.println("User registered successfully!");
+            List<User> existingUsers = SaveJsonToFile.loadObjects("users.json", new TypeToken<List<User>>() {}.getType());
+
+            if (isUsernameTaken(existingUsers, username)) {
+                System.out.println("Username already taken. Please choose a different one.");
+            } else {
+                existingUsers.add(user);
+
+                SaveJsonToFile.saveJsonToFile(existingUsers, "users.json");
+
+                System.out.println("User registered successfully!");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-        scanner.close();
     }
 
     private static boolean isUsernameTaken(List<User> users, String username) {

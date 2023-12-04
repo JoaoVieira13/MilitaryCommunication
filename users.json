@@ -6,5 +6,61 @@
     "profile": "Soldier",
     "inbox": [],
     "channels": []
+  },
+  {
+    "id": "20231204140908267",
+    "name": "Miguel",
+    "password": "123",
+    "profile": "Soldier",
+    "inbox": [],
+    "channels": []
+  },
+  {
+    "id": "20231204141653315",
+    "name": "Janaina",
+    "password": "123",
+    "profile": "Soldier",
+    "inbox": [],
+    "channels": []
+  },
+  {
+    "id": "20231204141737547",
+    "name": "Hugo",
+    "password": "123",
+    "profile": "Soldier",
+    "inbox": [],
+    "channels": []
+  },
+  {
+    "id": "20231204142729814",
+    "name": "Tiago",
+    "password": "123",
+    "profile": "Soldier",
+    "inbox": [],
+    "channels": []
+  },
+  {
+    "id": "20231204143230194",
+    "name": "Miguela",
+    "password": "123",
+    "profile": "Soldier",
+    "inbox": [],
+    "channels": []
+  },
+  {
+    "id": "20231204143538378",
+    "name": "Manuela",
+    "password": "123",
+    "profile": "Soldier",
+    "inbox": [],
+    "channels": []
+  },
+  {
+    "id": "20231204143945089",
+    "name": "Jam",
+    "password": "123",
+    "profile": "Soldier",
+    "inbox": [],
+    "channels": []
   }
 ]

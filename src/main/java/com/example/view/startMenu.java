@@ -28,7 +28,7 @@ public class startMenu {
                     System.out.println("Exit");
                     break;
                 default:
-                    System.out.println("Invalid option");
+                    System.out.println("Invalid option. Please try again.");
                     break;
             }
 

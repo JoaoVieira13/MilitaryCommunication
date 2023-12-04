@@ -15,7 +15,7 @@ public class SaveJsonToFile {
         try (FileWriter writer = new FileWriter(fileName)) {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             gson.toJson(list, writer);
-            System.out.println("Registros salvos em " + fileName);
+            //System.out.println("Registros salvos em " + fileName);
         } catch (IOException e) {
             e.printStackTrace();
         }
