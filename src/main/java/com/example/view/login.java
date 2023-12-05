@@ -3,7 +3,7 @@ package com.example.view;
 import java.util.List;
 import java.util.Scanner;
 
-import com.example.User;
+import com.example.models.User;
 import com.example.JSON.SaveJsonToFile;
 import com.google.gson.reflect.TypeToken;
 

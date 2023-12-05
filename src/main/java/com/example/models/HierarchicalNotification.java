@@ -1,13 +1,11 @@
-package com.example;
+package com.example.models;
 
-public class Message {
+public class HierarchicalNotification {
     private int idFrom;
 
     private int idTo;
 
     private String content;
-    
-    private boolean viewed;
 
     public int getIdFrom() {
         return idFrom;
@@ -33,18 +31,5 @@ public class Message {
         this.content = content;
     }
 
-    public boolean isViewed() {
-        return viewed;
-    }
-
-    public void setViewed(boolean viewed) {
-        this.viewed = viewed;
-    }
     
-    public Message(int idFrom, int idTo, String content) {
-        this.idFrom = idFrom;
-        this.idTo = idTo;
-        this.content = content;
-        this.viewed = false;
-    }
 }

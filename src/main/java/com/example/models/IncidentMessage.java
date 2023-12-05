@@ -1,10 +1,8 @@
-package com.example;
+package com.example.models;
 
-public class HierarchicalNotification {
+public class IncidentMessage {
     private int idFrom;
-
-    private int idTo;
-
+    
     private String content;
 
     public int getIdFrom() {
@@ -15,14 +13,6 @@ public class HierarchicalNotification {
         this.idFrom = idFrom;
     }
 
-    public int getIdTo() {
-        return idTo;
-    }
-
-    public void setIdTo(int idTo) {
-        this.idTo = idTo;
-    }
-
     public String getContent() {
         return content;
     }
@@ -31,5 +21,4 @@ public class HierarchicalNotification {
         this.content = content;
     }
 
-    
 }

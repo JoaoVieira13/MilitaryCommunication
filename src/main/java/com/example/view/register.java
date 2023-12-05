@@ -1,7 +1,7 @@
 package com.example.view;
 
 
-import com.example.User;
+import com.example.models.User;
 import com.example.JSON.SaveJsonToFile;
 import com.google.gson.reflect.TypeToken;
 
