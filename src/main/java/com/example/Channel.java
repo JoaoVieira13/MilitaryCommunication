@@ -44,5 +44,17 @@ public class Channel {
         this.messages = messages;
     }
 
+    public void broadcastMessage(User sender, String messageContent) {
+        Message message = new Message(Integer.parseInt(sender.getId()), 0, messageContent);
+        messages.add(message);
+        participants.forEach(member -> member.receiveMessage(message));
+    }
 
+    public void addMember(User user) {
+        participants.add(user);
+    }
+
+    public void removeMember(User user) {
+        participants.remove(user);
+    }
 }

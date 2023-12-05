@@ -76,4 +76,26 @@ public class User {
         this.channels = channels;
     }
 
+    public void sendMessage(User recipient, String messageContent) {
+        Message message = new Message(Integer.parseInt(this.getId()), Integer.parseInt(recipient.getId()), messageContent);
+        recipient.receiveMessage(message);
+    }
+
+    public void receiveMessage(Message message) {
+        inbox.add(message);
+    }
+
+    public void broadcastMessageToChannel(Channel channel, String messageContent) {
+        channel.broadcastMessage(this, messageContent);
+    }
+
+    public void joinChannel(Channel channel) {
+        channels.add(channel);
+        channel.addMember(this);
+    }
+
+    public void leaveChannel(Channel channel) {
+        channels.remove(channel);
+        channel.removeMember(this);
+    }
 }

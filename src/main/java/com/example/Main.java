@@ -1,8 +1,8 @@
 package com.example;
-import com.example.view.startMenu;
+import com.example.ProtocolTCP.Server;
 
 public class Main {
     public static void main(String[] args) {
-        startMenu.startMenu();
+        Server.main(args);
     }
 }

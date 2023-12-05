@@ -28,6 +28,7 @@ public class login {
                 if (isValidLogin(existingUsers, username, password)) {
                     System.out.println("\u001B[32mLogin successful!\u001B[0m");
                     loginSuccessful = true;
+                    MilitaryOptions.militaryOptions();
                 } else {
                     System.out.println("\u001B[31mInvalid username or password. Please try again.\u001B[0m");
                     System.out.println("Do you wish to try again? (y/n)");

@@ -41,4 +41,10 @@ public class Message {
         this.viewed = viewed;
     }
     
+    public Message(int idFrom, int idTo, String content) {
+        this.idFrom = idFrom;
+        this.idTo = idTo;
+        this.content = content;
+        this.viewed = false;
+    }
 }
